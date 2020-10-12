@@ -1,0 +1,28 @@
+###
+GET http://localhost:3000/api/employees
+
+###
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+    "name":"Fabian",
+    "position":"profesor",
+    "office":"Chile",
+    "salary":200000
+}
+
+###
+GET http://localhost:3000/api/employees/5f7bcc18963493a2d8ac3d58
+
+###
+DELETE http://localhost:3000/api/employees/5f7bcc18963493a2d8ac3d58
+
+
+###
+PUT http://localhost:3000/api/employees/5f7bcc0a963493a2d8ac3d57
+Content-Type: application/json
+
+{
+    "salary": 2000001
+}
