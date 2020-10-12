@@ -1,5 +1,5 @@
-const {Schema, model} = require('mongoose')
-
+const mongoose = require('mongoose')
+const { Schema } = mongoose;
 
 const employeeSchema = new Schema({
     name: {type: String, required: true},
@@ -7,9 +7,9 @@ const employeeSchema = new Schema({
     office: {type: String, required: true},
     salary: {type: Number, required: true}
 } ,{
-    timestamp: true,
+    timestamps: true,
     versionKey: false
 }
 )
 
-module.exports = model('Employee', employeeSchema);
+module.exports = mongoose.model('Employee', employeeSchema);
